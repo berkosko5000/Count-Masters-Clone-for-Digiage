@@ -38,7 +38,7 @@ public class PartyMember : MonoBehaviour
     {
         this.transform.SetParent(pool.transform);
         GetComponent<CapsuleCollider>().enabled = false;
-        //GetComponent<Animator>().SetTrigger("Fall");
+        GetComponent<Animator>().SetTrigger("Fall");
         GetComponent<Move>().StopMoveToDirection();
         GetComponent<MovementClass>().StopMovement();
         levelManager.ChangeAllyCount(-1);

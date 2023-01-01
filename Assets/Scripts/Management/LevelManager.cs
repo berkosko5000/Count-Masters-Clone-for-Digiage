@@ -39,7 +39,7 @@ public class LevelManager : MonoBehaviour
     public void ChangeAllyCount(int amount)
     {
         allyCount += amount;
-        if (allyCount < 0)
+        if (allyCount <= 0)
         {
             allyCount = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

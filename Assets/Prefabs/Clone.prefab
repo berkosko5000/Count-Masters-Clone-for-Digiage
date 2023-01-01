@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 625459716739608843}
   - component: {fileID: 530068022642861821}
   - component: {fileID: -4162164675979250065}
+  - component: {fileID: 7960056050626888912}
   m_Layer: 0
   m_Name: Clone
   m_TagString: Ally
@@ -141,3 +142,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
   pool: {fileID: 0}
+--- !u!95 &7960056050626888912
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576243509071871840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f50bdedd2aadd04988de1bf3c8cdbdb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

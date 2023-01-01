@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2937768128438946961}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: sliced_horizontal_obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7595888438735322980}
   - component: {fileID: 7595888438735322983}
   - component: {fileID: 7595888438735322982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: horizontal_box
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7595888439274613318}
   - component: {fileID: 7595888439274613313}
   - component: {fileID: 7595888439274613312}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: vertical_box
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

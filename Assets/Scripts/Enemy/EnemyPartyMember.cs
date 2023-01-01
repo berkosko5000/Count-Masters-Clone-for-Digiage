@@ -2,35 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PartyMember : MonoBehaviour
+public class EnemyPartyMember : MonoBehaviour
 {
     [HideInInspector] public LevelManager levelManager;
     [SerializeField] GameObject pool;
-    List<AllyPoint> allyPoints;
+    List<EnemyPoint> enemyPoints;
 
     private void Awake()
     {
         pool = GameObject.FindGameObjectWithTag("Pool");
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+        this.gameObject.GetComponent<Renderer>().material.color = Color.red;
     }
     public void JoinTeam()
     {
         GetComponent<Move>().StartMoveToDirection();
         GetComponent<MovementClass>().StartMovement();
         GetComponent<CapsuleCollider>().enabled = true;
-        allyPoints = transform.parent.GetComponent<AllyPointSetter>().allyPoints;
-        foreach (AllyPoint allyPoint in allyPoints)
+        enemyPoints = transform.parent.GetComponent<EnemyPointSetter>().enemyPoints;
+        foreach (EnemyPoint enemyPoint in enemyPoints)
         {
-            if (!allyPoint.AllyObject)
+            if (!enemyPoint.EnemyObject)
             {
-                allyPoint.AllyObject = gameObject;
-                GetComponent<MoveToTarget>().target = allyPoint.Point;
-                levelManager.ChangeAllyCount(1);
+                enemyPoint.EnemyObject = gameObject;
+                GetComponent<MoveToTarget>().target = enemyPoint.Point;
+                levelManager.ChangeEnemyCount(1);
                 break;
             }
         }
     }
-    public void LeaveParty()
+     public void LeaveParty()
     {
         StartCoroutine(LeavePartyCoroutine());
     }
@@ -41,13 +42,13 @@ public class PartyMember : MonoBehaviour
         //GetComponent<Animator>().SetTrigger("Fall");
         GetComponent<Move>().StopMoveToDirection();
         GetComponent<MovementClass>().StopMovement();
-        levelManager.ChangeAllyCount(-1);
+        levelManager.ChangeEnemyCount(-1);
 
-        foreach (AllyPoint allyPoint in allyPoints)
+        foreach (EnemyPoint enemyPoint in enemyPoints)
         {
-            if (allyPoint.AllyObject == gameObject)
+            if (enemyPoint.EnemyObject == gameObject)
             {
-                allyPoint.AllyObject = null;
+                enemyPoint.EnemyObject = null;
                 break;
             }
         }
@@ -56,5 +57,4 @@ public class PartyMember : MonoBehaviour
 
         gameObject.SetActive(false);
     }
-
 }

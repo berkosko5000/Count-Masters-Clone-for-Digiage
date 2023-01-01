@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject playerParty;
     [SerializeField] TMP_Text allyCountText;
     [HideInInspector] public int allyCount;
+    [HideInInspector] public int enemyCount;
+    [SerializeField] TMP_Text enemyCountText;
 
     void Start()
     {
@@ -31,5 +33,14 @@ public class LevelManager : MonoBehaviour
             //Loseeeeee
         }
         allyCountText.text = allyCount.ToString();
+    }
+    public void ChangeEnemyCount(int amount)
+    {
+        enemyCount += amount;
+        if (enemyCount < 0)
+        {
+            enemyCount = 0;
+        }
+        enemyCountText.text = enemyCount.ToString();
     }
 }

@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 7980544868855968897}
   - component: {fileID: 8831540208049967477}
   - component: {fileID: 8247515439108808875}
-  - component: {fileID: 625459716739608843}
-  - component: {fileID: 530068022642861821}
-  - component: {fileID: -4162164675979250065}
+  - component: {fileID: 4522148932516608614}
+  - component: {fileID: 3528618486636166872}
+  - component: {fileID: -5977022118923940375}
+  - component: {fileID: -2799248204965900012}
   m_Layer: 0
-  m_Name: Clone
-  m_TagString: Ally
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,11 +98,24 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.63
+  m_Radius: 0.7
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &625459716739608843
+--- !u!114 &4522148932516608614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576243509071871840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f192984628465f5418e1f396771fd117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempSpeed: 20
+--- !u!114 &3528618486636166872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0, z: 0}
---- !u!114 &530068022642861821
+--- !u!114 &-5977022118923940375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,21 +137,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4576243509071871840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958fc79f02473ca4aa0e93a5342b57ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tempSpeed: 20
---- !u!114 &-4162164675979250065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4576243509071871840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89499be32b61bdb4a9208ba35395f4cc, type: 3}
+  m_Script: {fileID: 11500000, guid: e25cabc160a586c49a8077f03fb91b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
   pool: {fileID: 0}
+--- !u!114 &-2799248204965900012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576243509071871840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e3ca5790467dd4baaf3dbf9505d0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

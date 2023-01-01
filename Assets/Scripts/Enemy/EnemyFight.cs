@@ -11,6 +11,11 @@ public class EnemyFight : MonoBehaviour
             MoveToPlayer(collidee.transform);
         }
     }
+    void OnTriggerExit(Collider collidee){
+        if(collidee.tag == "Ally"){
+            collidee.transform.parent.GetComponent<Swipe>().enabled = true;
+        }
+    }
     void MoveToPlayer(Transform playerPos){
         for(int i = 1; i < transform.childCount; i++){
             transform.GetChild(i).GetComponent<EnemyMovement>().StopMovement();

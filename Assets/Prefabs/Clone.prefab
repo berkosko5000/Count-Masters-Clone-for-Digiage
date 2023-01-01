@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7980544868855968897}
   - component: {fileID: 8831540208049967477}
   - component: {fileID: 8247515439108808875}
-  - component: {fileID: 7317340667318345377}
+  - component: {fileID: 625459716739608843}
+  - component: {fileID: 530068022642861821}
   m_Layer: 0
   m_Name: Clone
   m_TagString: Untagged
@@ -99,7 +100,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7317340667318345377
+--- !u!114 &625459716739608843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,9 +109,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4576243509071871840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cd7191414893843881cb852b270fe3, type: 3}
+  m_Script: {fileID: 11500000, guid: 59c5b6b1e591ee142898b3112ff92dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftMovement: {fileID: 0}
-  rightMovement: {fileID: 0}
-  swipeSpeed: 10
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &530068022642861821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576243509071871840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958fc79f02473ca4aa0e93a5342b57ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempSpeed: 2

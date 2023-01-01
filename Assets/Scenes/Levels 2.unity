@@ -1393,7 +1393,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18, y: 10, z: 60}
+  m_Size: {x: 18, y: 10, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1726498976
 MonoBehaviour:
@@ -1580,7 +1580,7 @@ PrefabInstance:
     - target: {fileID: 6058575075193194495, guid: 34ff9f82544d698438b9d70224d1cb3b,
         type: 3}
       propertyPath: optionMagnitude
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ff9f82544d698438b9d70224d1cb3b, type: 3}

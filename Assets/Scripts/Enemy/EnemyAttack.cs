@@ -5,13 +5,18 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     bool isFirst = false;
-    void OnCollisionEnter(Collision collidee)
+    void OnTriggerEnter(Collider collidee)
     {
-        if (collidee.collider.tag == "Ally" && !isFirst)
+        if (collidee.tag == "Ally" && !isFirst)
         {
             isFirst = true;
-            collidee.collider.GetComponent<PartyMember>().LeaveParty();
-            this.GetComponent<EnemyPartyMember>().LeaveParty();
+            if(collidee.GetComponent<PartyMember>().isDead == false){
+                collidee.GetComponent<PartyMember>().LeaveParty();
+                collidee.GetComponent<CapsuleCollider>().isTrigger = true;
+                this.GetComponent<EnemyPartyMember>().LeaveParty();
+                this.GetComponent<CapsuleCollider>().isTrigger = true;
+            }
+            
         }
     }
 }

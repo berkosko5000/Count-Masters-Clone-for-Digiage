@@ -33,10 +33,6 @@ public class EnemyPartyMember : MonoBehaviour
     }
      public void LeaveParty()
     {
-        StartCoroutine(LeavePartyCoroutine());
-    }
-    IEnumerator LeavePartyCoroutine()
-    {
         this.transform.SetParent(pool.transform);
         GetComponent<CapsuleCollider>().enabled = false;
         //GetComponent<Animator>().SetTrigger("Fall");
@@ -52,8 +48,6 @@ public class EnemyPartyMember : MonoBehaviour
                 break;
             }
         }
-
-        yield return new WaitForSeconds(1);
 
         gameObject.SetActive(false);
     }

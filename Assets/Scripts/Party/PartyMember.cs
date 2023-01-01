@@ -7,7 +7,7 @@ public class PartyMember : MonoBehaviour
     [HideInInspector] public LevelManager levelManager;
     [SerializeField] GameObject pool;
     List<AllyPoint> allyPoints;
-
+    public bool isDead = false;
     private void Awake()
     {
         pool = GameObject.FindGameObjectWithTag("Pool");
@@ -32,6 +32,7 @@ public class PartyMember : MonoBehaviour
     }
     public void LeaveParty()
     {
+        isDead = true;
         StartCoroutine(LeavePartyCoroutine());
     }
     IEnumerator LeavePartyCoroutine()
@@ -53,7 +54,7 @@ public class PartyMember : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1);
-
+        
         gameObject.SetActive(false);
     }
 

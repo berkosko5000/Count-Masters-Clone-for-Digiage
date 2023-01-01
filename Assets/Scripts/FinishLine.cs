@@ -7,7 +7,10 @@ public class FinishLine : MonoBehaviour
 {
     void OnTriggerEnter(Collider collidee){
         if(collidee.tag == "Ally"){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            nextLevel();
         }
+    }
+    public void nextLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -1326,6 +1326,8 @@ GameObject:
   - component: {fileID: 1726498973}
   - component: {fileID: 1726498972}
   - component: {fileID: 1726498974}
+  - component: {fileID: 1726498975}
+  - component: {fileID: 1726498976}
   m_Layer: 0
   m_Name: EnemyParty
   m_TagString: Untagged
@@ -1362,7 +1364,7 @@ Transform:
   m_Children:
   - {fileID: 449705504}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1726498974
 MonoBehaviour:
@@ -1380,6 +1382,31 @@ MonoBehaviour:
   startAngle: 60
   divideLayerSize: 1
   enemyPoints: []
+--- !u!65 &1726498975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726498971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18, y: 10, z: 60}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1726498976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726498971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7a74d2a184a9d44a51d45770edf39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946518966
 GameObject:
   m_ObjectHideFlags: 0

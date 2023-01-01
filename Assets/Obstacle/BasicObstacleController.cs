@@ -8,7 +8,7 @@ public class BasicObstacleController : MonoBehaviour
     {
         if (collidee.gameObject.tag == "Ally")
         {
-            collidee.GetComponent<PartyMember>().LeaveTeam();
+            collidee.GetComponent<PartyMember>().LeaveParty();
         }
     }
 }

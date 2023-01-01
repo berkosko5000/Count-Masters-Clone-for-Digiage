@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8247515439108808875}
   - component: {fileID: 625459716739608843}
   - component: {fileID: 530068022642861821}
+  - component: {fileID: -4162164675979250065}
   m_Layer: 0
   m_Name: Clone
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,4 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958fc79f02473ca4aa0e93a5342b57ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempSpeed: 2
+  tempSpeed: 20
+--- !u!114 &-4162164675979250065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576243509071871840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89499be32b61bdb4a9208ba35395f4cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
+  pool: {fileID: 0}

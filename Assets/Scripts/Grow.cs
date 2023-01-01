@@ -4,52 +4,37 @@ using UnityEngine;
 
 public class Grow : MonoBehaviour
 {
-
-    [SerializeField] Transform clonesTab;
     public int count = 1;
     [SerializeField] GameObject _clone;
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.GetComponent<Options>())
+        int magnitude = this.gameObject.GetComponent<Options>().optionMagnitude;
+        ChannelType channelType = this.gameObject.GetComponent<Options>().channelType;
+        Vector3 firstPos = other.gameObject.transform.position;
+        Transform parent = other.transform.parent;
+        float randomPositionRange = 0.5f;
+        if (channelType == ChannelType.Multiplication)
         {
-            int magnitude = other.gameObject.GetComponent<Options>().optionMagnitude;
-            bool operatorIsMultiplication = other.gameObject.GetComponent<Options>().isMultiplication;
-            Vector3 firstPos = gameObject.transform.position;
-            if (operatorIsMultiplication)
+            count = count * magnitude;
+        }
+
+        else
+        {
+            count = count + magnitude;
+        }
+        for (int i = 0; i < count; i++)
             {
-                Multiply(magnitude, firstPos, count);
+                Vector3 position = new Vector3(Random.Range(parent.position.x - randomPositionRange, parent.position.x + randomPositionRange),
+                                                parent.position.y,
+                                                Random.Range(parent.position.z - randomPositionRange, parent.position.z + randomPositionRange));
+
+                GameObject ally = ObjectPooler.SharedInstance.GetPooledObject("Ally");
+                ally.transform.position = position;
+                ally.transform.SetParent(parent);
+                ally.GetComponent<PartyMember>().JoinTeam();
+                ally.SetActive(true);
             }
-
-            else
-            {
-                Add(magnitude, firstPos, count);
-            }
-        }
-
-    }
-
-
-    void Multiply(int magnitude, Vector3 firstPos, int count)
-    {
-        for (int i = 0; i < count * magnitude; i++)
-        {
-            GameObject temp = Instantiate(_clone, clonesTab);
-            Destroy(temp.GetComponent<Grow>());
-            temp.transform.position = new Vector3(firstPos.x+1,firstPos.y,firstPos.z-2);
-        }
-        count *= magnitude;
-    }
-
-    void Add(int magnitude, Vector3 firstPos, int count)
-    {
-        for (int i = 0; i < magnitude; i++)
-        {
-            GameObject temp = Instantiate(_clone, clonesTab);
-            temp.transform.position = firstPos;
-        }
-        count += magnitude;
     }
 }
 

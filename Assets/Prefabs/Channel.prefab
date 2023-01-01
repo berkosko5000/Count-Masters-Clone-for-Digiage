@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6058575074013265908}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -189,7 +189,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6058575074271260966}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 6058575074394435522}
   - component: {fileID: 6058575074394435523}
   - component: {fileID: 6058575074394435520}
+  - component: {fileID: 483946459706392524}
   m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
@@ -305,7 +306,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionMagnitude: 0
-  isMultiplication: 0
+  channelType: 0
+--- !u!114 &483946459706392524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058575074394435525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3fbc592376f094eb35a713bb4d5ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 1
+  _clone: {fileID: 4576243509071871840, guid: 38c7b565b5c1fd14782c65bbc9cb5b05, type: 3}
 --- !u!1 &6058575074715784988
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +413,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6058575074715784988}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -452,6 +467,7 @@ GameObject:
   - component: {fileID: 6058575075193194465}
   - component: {fileID: 6058575075193194466}
   - component: {fileID: 6058575075193194495}
+  - component: {fileID: 7731131194602094400}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -550,4 +566,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionMagnitude: 0
-  isMultiplication: 0
+  channelType: 0
+--- !u!114 &7731131194602094400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058575075193194468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3fbc592376f094eb35a713bb4d5ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 1
+  _clone: {fileID: 4576243509071871840, guid: 38c7b565b5c1fd14782c65bbc9cb5b05, type: 3}

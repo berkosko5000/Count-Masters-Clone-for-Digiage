@@ -8,7 +8,8 @@ public class PartyMember : MonoBehaviour
     [SerializeField] GameObject pool;
     List<AllyPoint> allyPoints;
 
-    private void Awake(){
+    private void Awake()
+    {
         pool = GameObject.FindGameObjectWithTag("Pool");
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
     }
@@ -31,7 +32,7 @@ public class PartyMember : MonoBehaviour
     }
     public void LeaveTeam()
     {
-        StartCoroutine(LeaveTeamCoroutine());   
+        StartCoroutine(LeaveTeamCoroutine());
     }
     IEnumerator LeaveTeamCoroutine()
     {

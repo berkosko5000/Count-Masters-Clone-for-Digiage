@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] GameObject ally;
     [SerializeField] GameObject playerParty;
-    //[SerializeField] TMP_Text allyCountText;
+    [SerializeField] TMP_Text allyCountText;
     [HideInInspector] public int allyCount;
 
     void Start()
@@ -25,10 +25,11 @@ public class LevelManager : MonoBehaviour
     public void ChangeAllyCount(int amount)
     {
         allyCount += amount;
-        if(allyCount < 0){
+        if (allyCount < 0)
+        {
             allyCount = 0;
             //Loseeeeee
         }
-        //allyCountText.text = allyCount.ToString();
+        allyCountText.text = allyCount.ToString();
     }
 }
